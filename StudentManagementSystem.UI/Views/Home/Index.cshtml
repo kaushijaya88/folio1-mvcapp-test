@@ -1,0 +1,173 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-12 tablePadding">
+        <table id="tblClassData" class="table-responsive display" cellspacing="0" style="width:100%">
+            <thead>
+                <tr>
+                    <th style="visibility:hidden">Id</th>
+                    <th style="width:20%;">Name</th>
+                    <th style="width:30%;">Location</th>
+                    <th style="width:30%;">Teacher Name</th>
+                    <th style="width:10%;"></th>
+                    <th style="width:10%;"></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<div class="row buttonStyle">
+    <button id="addClass">Add Class</button>
+</div>
+<label class="tablePadding" id="labelId"></label>
+<input type="hidden" id="hiddenId" value="0">
+<div class="row studentRow studentClass">
+    <div class="col-md-12 tablePadding">
+        <table id="tblStudentData" class="table-responsive display" cellspacing="0" style="width:100%">
+            <thead>
+                <tr>
+                    <th style="visibility:hidden">Id</th>
+                    <th style="width:40%;">Student Name</th>
+                    <th style="width:20%;">Age</th>
+                    <th style="width:20%;">GPA</th>
+                    <th style="width:10%;"></th>
+                    <th style="width:10%;"></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<div class="row studentRow buttonStyle">
+    <button id="addStudent">Add Student</button>
+</div>
+<div class="row">
+    <div class="col-md-12 nopadding">
+        <form id="dialogClass" class="col-md-12 dialogCls" style="width:500px">
+            <div id="addClassForm" style="margin-top:20px">
+                <div class="rowMarginAddFileType">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="popTitleCls">Name</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <input type="text" required id="ClassName" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="rowMarginAddFileType">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="popTitleCls">Location</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <input required type="text" id="LocationName" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="rowMarginAddFileType">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label id="contextLabel" class="popTitleCls">Teacher Name</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <input required type="text" id="TeacherName" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12 nopadding">
+                        <div class="pull-right" style="padding-right:12px;">
+                            <div style="float:left">
+                                <button class="btn btn-primary-login" id="saveClassButton">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 nopadding">
+        <form id="dialogStudent" class="col-md-12 dialogCls" style="width:500px">
+            <div id="addStudentForm" style="margin-top:20px">
+                <div class="rowMarginAddFileType">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="popTitleCls">First Name</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <input type="text" required id="firstName" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="rowMarginAddFileType">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="popTitleCls">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <input type="text" required id="lastName" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="rowMarginAddFileType">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label id="contextLabel" class="popTitleCls">Age</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <input type="number" required id="ageId" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="rowMarginAddFileType">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label id="contextLabel" class="popTitleCls">GPA</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <input type="number" required step="0.1" id="gpaId" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row error classerror"></div>
+                <div class="row">
+                    <div class="col-md-12 nopadding">
+                        <div class="pull-right" style="padding-right:12px;">
+                            <div style="float:left">
+                                <button class="btn btn-primary-login" id="saveStudentButton">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/global.js"></script>
+    <script src="~/js/custom/studentManagement.js"></script>
+    <script src="~/js/custom/classManagement.js"></script>
+    <script src="~/js/custom/portal.js"></script>
+}

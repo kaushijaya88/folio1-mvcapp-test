@@ -1,0 +1,44 @@
+﻿.studentRow{
+    visibility:hidden;
+}
+
+.tablePadding{
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+.buttonStyle {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ui-dialog .dialogCls {
+    overflow: hidden !important;
+    width: 300px !important;
+}
+
+.editClass, .deleteClass, .editStudent, .deleteStudent{
+    cursor:pointer;
+}
+
+.error{
+    color:red !important;
+}
+
+.classerror{
+    margin-left: 3px;
+    margin-bottom: 3px;
+}
+
+.nameClass{
+    color:green;
+    font-weight:bold;
+}
+
+.starClass {
+    font-size: 15px;
+    padding-left: 4px;
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
